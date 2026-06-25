@@ -42,7 +42,7 @@ HAVING COUNT(Order_Id ) >
         GROUP BY Restaurant_id
 		) temp
 );
-
+```
 3. Calculate month-wise revenue and show the previous month revenue.
    
 ```sql
