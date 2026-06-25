@@ -18,7 +18,8 @@ This project analyzes online Food orders data using MySQL to identify sales tren
 
 ## Key Questions Answered
 1.	Display all completed orders along with customer name and restaurant name.
-''' sql
+   
+'''sql
 SELECT C.Customer_Id,  C.customer_name, R.restaurant_name ,O.Order_Status
 FROM customers C JOIN orders O 
 ON C.Customer_Id = O.Customer_Id
