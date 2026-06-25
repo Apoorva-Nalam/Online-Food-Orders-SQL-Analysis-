@@ -27,8 +27,4 @@ JOIN restaurants R
 ON O.Restaurant_Id = R.Restaurant_Id
 WHERE Order_Status = "Completed";
 ```
-- Which customers placed the most orders?
-- Monthly order trends
-- Category-wise performance
-
 
