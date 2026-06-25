@@ -27,4 +27,18 @@ JOIN restaurants R
 ON O.Restaurant_Id = R.Restaurant_Id
 WHERE Order_Status = "Completed";
 ```
+2. Calculate month-wise revenue and show the previous month revenue.
+   
+```sql
+SELECT month_no, revenue,
+       LAG(revenue) OVER(ORDER BY month_no) AS previous_month_revenue
+       FROM ( SELECT MONTH(order_date) AS month_no,
+			  SUM(order_amount) AS revenue
+              FROM orders
+              GROUP BY MONTH(order_date)
+			) temp;
+```
+
+
+
 
